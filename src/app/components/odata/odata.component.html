@@ -1,0 +1,23 @@
+    <mat-toolbar color="primary" style="margin-bottom: 20px;">
+      <h2>Welcome to OData Component</h2>
+    </mat-toolbar>
+  
+    <button mat-raised-button color="primary" style="width: 150px; margin-bottom: 10px;" (click)="testGet()">Get Request</button>
+    <br />
+
+    <button mat-raised-button color="primary" style="width: 150px; margin-bottom: 10px;" (click)="testPost()">Post Request</button>
+    <br />
+
+    <button mat-raised-button color="primary" style="width: 150px; margin-bottom: 10px;" (click)="testPut()">Put Request</button>
+    <br />
+
+    <button mat-raised-button color="primary" style="width: 150px; margin-bottom: 10px;" (click)="testPatch()">Patch Request</button>
+    <br />
+
+    <button mat-raised-button color="primary" style="width: 150px; margin-bottom: 10px;" (click)="testDelete()">Delete Request</button>
+    <br />
+
+    <mat-card class="mat-elevation-z5">
+    <h3>Request results will be displayed here</h3>
+    <pre>{{requestResult | json}}</pre>
+    </mat-card>
