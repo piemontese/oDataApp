@@ -8,7 +8,7 @@ import { IUrlOptions } from '../../models/odata-model';
     selector: 'odata',
     templateUrl: 'odata.component.html'
 })
-export class OdataComponent { //implements OnInit {
+export class OdataComponent { // implements OnInit {
 
     public requestResult: any;
 
@@ -17,8 +17,8 @@ export class OdataComponent { //implements OnInit {
     ngOnInit() { }
 
     testGet() {
-        let urlOptions: IUrlOptions = <IUrlOptions>{};
-        urlOptions.restOfUrl = "Products?$format=json";
+        const urlOptions: IUrlOptions = <IUrlOptions>{};
+        urlOptions.restOfUrl = 'Products?$format=json';
         this.odata.Request(RequestTypes.get, urlOptions).subscribe(
             data => this.requestResult = data,
             error => alert(error)
@@ -26,7 +26,7 @@ export class OdataComponent { //implements OnInit {
     }
 
     testPost() {
-        let urlOptions: IUrlOptions = <IUrlOptions>{};
+        const urlOptions: IUrlOptions = <IUrlOptions>{};
         this.odata.Request(RequestTypes.post, urlOptions).subscribe(
             data => this.requestResult = data,
             error => alert(error)
@@ -34,7 +34,7 @@ export class OdataComponent { //implements OnInit {
     }
 
     testPut() {
-        let urlOptions: IUrlOptions = <IUrlOptions>{};
+        const urlOptions: IUrlOptions = <IUrlOptions>{};
         this.odata.Request(RequestTypes.put, urlOptions).subscribe(
             data => this.requestResult = data,
             error => alert(error)
@@ -42,7 +42,7 @@ export class OdataComponent { //implements OnInit {
     }
 
     testPatch() {
-        let urlOptions: IUrlOptions = <IUrlOptions>{};
+        const urlOptions: IUrlOptions = <IUrlOptions>{};
         this.odata.Request(RequestTypes.patch, urlOptions).subscribe(
             data => this.requestResult = data,
             error => alert(error)
@@ -50,7 +50,7 @@ export class OdataComponent { //implements OnInit {
     }
 
     testDelete() {
-        let urlOptions: IUrlOptions = <IUrlOptions>{};
+        const urlOptions: IUrlOptions = <IUrlOptions>{};
         this.requestResult = this.odata.Request(RequestTypes.delete, urlOptions);
     }
 

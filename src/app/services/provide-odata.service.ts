@@ -8,5 +8,5 @@ export function ProvideOdataService(url: string) {
             return new OdataService(url, http);
         },
         deps: [Http]
-    }
+    };
 }

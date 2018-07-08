@@ -9,5 +9,5 @@ export enum RequestTypes {
 }
 
 export interface IUrlOptions {
-    restOfUrl: string
+    restOfUrl: string;
 }

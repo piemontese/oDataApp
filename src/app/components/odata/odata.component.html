@@ -1,23 +1,24 @@
-    <mat-toolbar color="primary" style="margin-bottom: 20px;">
-      <h2>Welcome to OData Component</h2>
-    </mat-toolbar>
+<mat-toolbar color="primary" class="mat-elevation-z8" style="margin-bottom: 20px;">
+  <h2>Welcome to OData Component</h2>
   
-    <button mat-raised-button color="primary" style="width: 150px; margin-bottom: 10px;" (click)="testGet()">Get Request</button>
+  <mat-toolbar-row>
+    <button mat-button style="margin-bottom: 10px;" (click)="testGet()">Get Request</button>
+
+    <button mat-button style="margin-bottom: 10px;" (click)="testPost()">Post Request</button>
     <br />
 
-    <button mat-raised-button color="primary" style="width: 150px; margin-bottom: 10px;" (click)="testPost()">Post Request</button>
+    <button mat-button style="width: 150px; margin-bottom: 10px;" (click)="testPut()">Put Request</button>
     <br />
 
-    <button mat-raised-button color="primary" style="width: 150px; margin-bottom: 10px;" (click)="testPut()">Put Request</button>
+    <button mat-button style="width: 150px; margin-bottom: 10px;" (click)="testPatch()">Patch Request</button>
     <br />
 
-    <button mat-raised-button color="primary" style="width: 150px; margin-bottom: 10px;" (click)="testPatch()">Patch Request</button>
+    <button mat-button style="width: 150px; margin-bottom: 10px;" (click)="testDelete()">Delete Request</button>
     <br />
+  </mat-toolbar-row>
+</mat-toolbar>
 
-    <button mat-raised-button color="primary" style="width: 150px; margin-bottom: 10px;" (click)="testDelete()">Delete Request</button>
-    <br />
-
-    <mat-card class="mat-elevation-z5">
+<mat-card class="mat-elevation-z8">
     <h3>Request results will be displayed here</h3>
     <pre>{{requestResult | json}}</pre>
-    </mat-card>
+</mat-card>
